@@ -21,7 +21,7 @@ The long-term roadmap for CareerOS includes the following capability layers, whi
 ## Tech Stack
 
 ### Backend Service
-*   **Language:** Python 3.12+
+*   **Language:** Python 3.13+
 *   **API Framework:** FastAPI
 *   **Database:** PostgreSQL
 *   **ORM:** SQLAlchemy 2.0
@@ -103,7 +103,7 @@ gantt
 Follow these steps to set up a local development environment for CareerOS:
 
 ### 1. Prerequisites
-Ensure you have Python 3.12+ installed on your host system.
+Ensure you have Python 3.13+ installed on your host system.
 
 ### 2. Install `uv`
 `uv` is the package and environment manager utilized in this project.
