@@ -1,0 +1,10 @@
+[project]
+name = "careeros-backend"
+version = "0.1.0"
+description = "CareerOS Backend - Production-Grade AI Career Copilot Service"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = []
