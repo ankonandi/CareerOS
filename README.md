@@ -98,6 +98,92 @@ gantt
 
 ---
 
+## Development Setup
+
+Follow these steps to set up a local development environment for CareerOS:
+
+### 1. Prerequisites
+Ensure you have Python 3.12+ installed on your host system.
+
+### 2. Install `uv`
+`uv` is the package and environment manager utilized in this project.
+*   **macOS / Linux:**
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+*   **Windows (PowerShell):**
+    ```powershell
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+*   **Via pip:**
+    ```bash
+    pip install uv
+    ```
+
+### 3. Initialize Virtual Environment & Install Dependencies
+Navigate to the `backend/` directory, set up the virtual environment, and synchronize all packages and development tools:
+```bash
+cd backend
+uv venv
+uv sync
+```
+This generates a local `.venv` environment and installs all dependencies specified in the `pyproject.toml` configuration.
+
+### 4. Activate the Virtual Environment
+*   **macOS / Linux:**
+    ```bash
+    source .venv/bin/activate
+    ```
+*   **Windows (PowerShell):**
+    ```powershell
+    .venv\Scripts\Activate.ps1
+    ```
+
+### 5. Local Configurations (.env)
+Copy the example environment settings to `.env` in the repository root directory:
+```bash
+cp .env.example .env
+```
+Update database names, credentials, or custom settings in your local `.env` file.
+
+### 6. Development Quality Tools
+We use Ruff for code formatting and linting. Run these checks inside the `backend/` directory:
+*   **Run Linter:**
+    ```bash
+    uv run ruff check .
+    ```
+*   **Run Linter (with Auto-fixes):**
+    ```bash
+    uv run ruff check --fix .
+    ```
+*   **Run Formatter Check:**
+    ```bash
+    uv run ruff format --check .
+    ```
+*   **Run Formatter:**
+    ```bash
+    uv run ruff format .
+    ```
+
+### 7. Run the Skeleton Application
+Verify that the configuration is parsed correctly by running the application entrypoint:
+```bash
+uv run python -m app.main
+```
+
+### 8. Git Pre-Commit Hooks
+Pre-commit checks are configured to block commits containing format or lint violations.
+Install the hooks in your local Git folder (run this from the `backend/` directory or root):
+```bash
+uv run pre-commit install
+```
+To run the hooks manually on all repository files:
+```bash
+uv run pre-commit run --all-files
+```
+
+---
+
 ## Sprint Status
 
 ### Sprint 0: Engineering Foundation (Current)

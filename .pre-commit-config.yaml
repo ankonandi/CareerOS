@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------------
+# Pre-commit Hook Configuration
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+# ------------------------------------------------------------------------------
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.0
+    hooks:
+      # Run the Ruff linter, sorting imports and applying safe auto-fixes.
+      - id: ruff
+        args: [ --fix ]
+      # Run the Ruff formatter to check style/spacing.
+      - id: ruff-format
