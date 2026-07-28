@@ -1,0 +1,5 @@
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      781       1     781      13836  cons1     197609 23:44:58 /usr/bin/bash
+      128       1     128      37828  cons0     197609 22:55:13 /usr/bin/bash
+      780     128     780       2668  cons0     197609 23:44:21 /c/Users/ankon/AppData/Local/Programs/Python/Python313/Scripts/uv
+      830     781     830       2220  cons1     197609 23:45:03 /usr/bin/PS
